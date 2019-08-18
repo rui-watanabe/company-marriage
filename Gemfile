@@ -67,3 +67,5 @@ gem 'sprockets', '3.7.2'
 
 gem 'devise'
 gem 'devise-bootstrap-views'
+
+gem 'mini_magick'
