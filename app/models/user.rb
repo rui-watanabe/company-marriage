@@ -6,5 +6,9 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :name, presence: true
   validates :profile, presence: true
+  validates :avatar, attached: true
+
+  has_one_attached :avatar
+
       
 end
