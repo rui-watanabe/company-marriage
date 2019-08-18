@@ -2,6 +2,7 @@
 <h1 style="padding-top:30px;"><%= t('ログイン') %></h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= bootstrap_devise_error_messages! %>
   
   <div class="form-group">
     <%= f.label :email %>
