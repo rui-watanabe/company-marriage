@@ -1,50 +1,28 @@
-<div class="account-page" id="account-page">
-  <div class="account-page__inner clearfix">
-    <div class="account-page__inner--left account-page__header"></div>
-    <h3 style="text-align:center; margin:10px;">
-      <%= @user.name %> <span>さんのアカウント編集</span></h3>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4" style="margin:0 auto;">
-          <div class="card">
-            <%= image_tag @user.avatar.variant(resize:'400x500').processed %>
-              <div class="card-body">
-                <p class="card-text" style="text-align:center;">
-                  <%= @user.profile %>
-                </p>
-                <div class="account-page__inner--right user-form">
-                  <%= form_for(current_user) do |f| %>
-                    <div class="field">
-                      <div class="field-label" style="color:black">
-                        <%= f.label :"名前",style:"font-weight: bold;"%>
-                      </div>
-                      <div class="field-input">
-                        <%= f.text_field :name, autofocus: true %>
-                      </div>
-                    </div>
-                    <div class="field" style="margin-top:30px;">
-                      <div class="field-label" style="color:black">
-                        <%= f.label :"プロフィール",style:"font-weight: bold;"%>
-                      </div>
-                      <div class="field-input">
-                        <%= f.text_field :profile, autofocus: true %>
-                      </div>
-                    </div>
-                    <div class="field" style="padding-top:20px;">
-                      <div class="field-label" style="color:black">
-                        <%= f.label :"画像の変更",style:"font-weight: bold;" %>
-                      </div>
-                      <div class="field-input">
-                        <%= f.file_field :avatar %>
-                      </div>
-                    </div>
-                    <div class="actions" style="padding-top:50px;">
-                      <%= f.submit "更新する", class: 'btn btn-pink100_rsd'%>
-                    </div>
-                </div>
-              </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" style="margin:0 auto;">
+      <h3 style="text-align:center; margin:10px;">
+        <%= @user.name %> <span>さんのページ</span></h3>
+      <div class="card" style="color:black;">
+        <%= image_tag @user.avatar.variant(resize:'400x600').processed %>
+          <div class="card-body" style="margin:0 auto;">
+            <p class="card-text" style="text-align:center; font-size: 30px;"><strong><%= @user.name %></strong></p>
+            <p class="card-text" style="text-align:center;">
+              <%= @user.profile %>
+            </p>
           </div>
-        </div>
+          <%if current_user.id==@user.id%> 
+            <button style="margin: 0 auto;" class="btn btn-red50_rsd">
+              <%= link_to edit_user_path do%>
+              <span style="color: ">プロフィール編集</span>
+              <% end %>
+            </button>
+          <% end %> 
+          <button style=" margin: 20px auto 0px;" class="btn btn-red50_rsd">
+            <%= link_to "/users/index" do %>
+            <span>ユーザー一覧に戻る</span>
+            </button>
+            <% end %>
       </div>
     </div>
   </div>
