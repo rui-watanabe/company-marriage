@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'tweets#index' 
-  resources :tweets
-  
+  resources :tweets do
+    resources  :comments, only: [:create]    
+  end  
   get "home",to: "home#top"
   get "about",to: "home#about"
 end
