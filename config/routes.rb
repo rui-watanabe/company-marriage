@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end  
   get "home",to: "home#top"
   get "about",to: "home#about"
+  get "users/index",to: "users#index"
+  resources :users, only: [:show,:edit,:update] 
 end
