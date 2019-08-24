@@ -7,8 +7,16 @@
         <%= image_tag @user.avatar.variant(resize:'400x600').processed %>
           <div class="card-body" style="margin:0 auto;">
             <p class="card-text" style="text-align:center; font-size: 30px;"><strong><%= @user.name %></strong></p>
-            <p class="card-text" style="text-align:center;">
-              <%= @user.profile %>
+            <p class="card-text" style="text-align:center;"><%= @user.profile %>
+            <%if current_user.id==@user.id%>
+              <%= @user.follow_count %>
+                <%= link_to "人気になる", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get %>
+              <%= @user.followers_count %>
+                <%= link_to "人あなたを気になる", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get%>
+            <%end%>
+            <% if current_user.id != @user.id %>
+              <%= render 'follow_form' %>
+            <% end %>
             </p>
           </div>
           <%if current_user.id==@user.id%> 
@@ -19,10 +27,10 @@
             </button>
           <% end %> 
           <button style=" margin: 20px auto 0px;" class="btn btn-red50_rsd">
-            <%= link_to "/users/index" do %>
-            <span>ユーザー一覧に戻る</span>
-            </button>
-            <% end %>
+          <%= link_to "/users/index" do %>
+          <span>ユーザー一覧に戻る</span>
+          </button>
+          <% end %>
       </div>
     </div>
   </div>
