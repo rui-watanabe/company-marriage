@@ -42,6 +42,18 @@ class UsersController < ApplicationController
   def follower_list
     @user = User.find(params[:user_id])
   end
+
+  def release
+    @user =  User.find(params[:user_id])
+    @user.released! unless @user.released?
+    redirect_to  "/users/#{@user.id}/edit", notice: 'このアカウントを公開しました'
+  end
+
+  def nonrelease
+    @user =  User.find(params[:user_id])
+    @user.nonreleased! unless @user.nonreleased?
+    redirect_to "/users/#{@user.id}/edit", notice: 'このアカウントを非公開にしました'
+  end
   
   private
 

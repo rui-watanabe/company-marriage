@@ -12,5 +12,7 @@ class User < ApplicationRecord
 
   acts_as_followable
   acts_as_follower
+
+  enum status:{nonreleased: 0, released: 1}
       
 end
