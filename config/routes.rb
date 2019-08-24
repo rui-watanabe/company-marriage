@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   put 'users/unfollow/:user_id',to: 'users#unfollow'
   get 'users/follow_list/:user_id',to: 'users#follow_list'
   get 'users/follower_list/:user_id',to:'users#follower_list'
+  patch 'users/nonrelease/:user_id',to:'users#nonrelease'
+  patch 'users/release/:user_id',to: 'users#release'
 end
