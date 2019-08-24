@@ -1,0 +1,25 @@
+<div class="main users-index">
+  <div class="container">
+    <h1 class="users-heading" style="text-align:center; padding:40px;">ユーザー一覧</h1>
+    <% @users.each do |user| %>
+      <div class="card-group" style="margin:30px;">
+        <div class="border">
+          <%= image_tag user.avatar,style:"width:360px; height:360px;"%>
+        </div>
+        <div class="card-body" style="margin:30px;" %>
+          <h4 class="card-title">
+            <%= user.name %>
+          </h4>
+          <p class="card-text">プロフィール：
+            <%= user.profile%>
+          </p>
+          <div class="button_wrapper"> <button class="btn btn-red100_ftg btn-lg">
+        <%= link_to '詳細', "/users/#{user.id}"%>
+      </button> </div>
+        </div>
+      </div>
+      <% end %>
+        <%= paginate(@users) %>
+  </div>
+</div>
+</div>
