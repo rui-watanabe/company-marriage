@@ -13,8 +13,8 @@
 <hr>
 <div class="chats">
   <% if @messages.present? %>
-    <% @messages.each do |m| %>
-      <div class="chat" data-message-id=< %=m .id %>>
+    <div class="chat" data-message-id=< %=m .id %>
+      <% @messages.each do |m| %>
         <div class="chat-box">
           <div class="chat-face">
             <%= image_tag m.user.avatar, style:"width:100px; height:100px;" %>
@@ -23,10 +23,10 @@
             <%= m.created_at.strftime("%Y-%m-%d %H:%M")%>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   <% else %>
-  <h3 class="text-center">メッセージはまだありません</h3>
+    <h3 class="text-center">メッセージはまだありません</h3>
   <% end %>
     <div class="posts">
       <%= form_for @message do |f| %>
