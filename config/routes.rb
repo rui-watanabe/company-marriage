@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get "home",to: "home#top"
   get "about",to: "home#about"
   get "users/index",to: "users#index"
-  resources :users, only: [:show,:edit,:update] 
+  resources :users, only: [:show,:edit,:update]
+  resources :messages, only: [:create]
+  resources :rooms, only: [:create, :show, :index]
   put 'users/follow/:user_id',to: 'users#follow'
   put 'users/unfollow/:user_id',to: 'users#unfollow'
   get 'users/follow_list/:user_id',to: 'users#follow_list'
