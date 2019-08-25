@@ -1,0 +1,10 @@
+
+
+.notice {
+  background-color: rgba(131, 205, 248, 0.568);
+  color: white;
+  height:40px;
+  font-size:20px;
+  line-height: 40px;
+  text-align: center;
+}
