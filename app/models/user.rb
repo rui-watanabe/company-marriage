@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   acts_as_followable
   acts_as_follower
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
 
   enum status:{nonreleased: 0, released: 1}
       
