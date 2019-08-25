@@ -67,7 +67,15 @@ gem 'sprockets', '3.7.2'
 
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'bootstrap-sass'
+
+gem 'rails-i18n'
 
 gem 'mini_magick'
+
+gem 'kaminari'
+gem 'jquery-rails'
+
+gem 'rails-i18n'
 
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
