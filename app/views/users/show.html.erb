@@ -7,7 +7,7 @@
         <%= image_tag @user.avatar.variant(resize:'400x600').processed %>
           <div class="card-body" style="margin:0 auto;">
             <p class="card-text" style="text-align:center; font-size: 30px;"><strong><%= @user.name %></strong></p>
-            <p class="card-text" style="text-align:center;"><%= @user.profile %>
+            <p class="card-text" style="text-align:center;"><%= @user.profile %></p>
             <%if current_user.id==@user.id%>
               <%= @user.follow_count %>
                 <%= link_to "人気になる", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get %>
@@ -17,7 +17,21 @@
             <% if current_user.id != @user.id %>
               <%= render 'follow_form' %>
             <% end %>
-            </p>
+            <% if @user.id == current_user.id %>
+            <% else %>
+              <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %>
+              <% if @isRoom == true %>
+                <p style="text-align:center; margin-top:10px;"><a href="/rooms/<%= @roomId %>" class="btn btn-pink200_rsd">チャットへ</a>
+              <% else %>
+                <%= form_for @room do |f| %>
+                  <%= fields_for @entry do |e| %>
+                    <%= e.hidden_field :user_id, value: @user.id %>
+                  <% end %>
+                  <%= f.submit "チャットを始める", class:"btn btn-primary",style:"margin-top:30px;"%>
+                <% end %>
+              <% end %>
+              <% end %>
+            <% end %>
           </div>
           <%if current_user.id==@user.id%> 
             <button style="margin: 0 auto;" class="btn btn-red50_rsd">
