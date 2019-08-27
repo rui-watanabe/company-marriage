@@ -3,7 +3,7 @@ $(function(){
     var html =  `<div class="chat" data-chat-id="${message.id}">
                   <div class="chat-box">
                   <div class="chat-face">
-                  <img style="width:100px; height:100px;" src=${message.avatar}></div>
+                  <img style="width:100px; height:100px;" src= "${message.avatar}"></div>
                   <div class="chat-hukidashi">
                         <strong>${message.content}</strong>
                         <br>${message.date}
