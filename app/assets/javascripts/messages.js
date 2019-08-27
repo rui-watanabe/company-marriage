@@ -3,7 +3,7 @@ $(function(){
     var html =  `<div class="chat" data-chat-id="${message.id}">
                   <div class="chat-box">
                   <div class="chat-face">
-                  <img style="width:100px; height:100px;" src="http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--68687809d4ad7b129c11b346bc17c59a80b60df4/${message.avatar}"></div>
+                  <img style="width:100px; height:100px;" src="http://3.114.152.122/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--34584dd61cc5d4f5ceee0c36244274fb75c8f6a1/${message.avatar}"></div>
                   <div class="chat-hukidashi">
                         <strong>${message.content}</strong>
                         <br>${message.date}
