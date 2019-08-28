@@ -8,4 +8,5 @@ FactoryBot.define do
     byte_size {13317}
     checksum {"R-EvpP3cJEEQCSwQq/FRCF=="}
     created_at {"2019-08-25 04:34:42"}
+  end
 end

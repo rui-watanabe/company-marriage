@@ -1,7 +1,6 @@
 $(function(){
   function buildMessage(message){
-    var html =  `<div class="chat" data-chat-id="${message.id}">
-                  <div class="chat-box">
+    var html =  `<div class="chat-box">
                   <div class="chat-face">
                   <img style="width:100px; height:100px;" src= "${message.avatar}"></div>
                   <div class="chat-hukidashi">
@@ -26,7 +25,7 @@ $(function(){
     })
     .done(function(data){
       var html = buildMessage(data);
-      $('.chats').append(html)
+      $('.chat').append(html)
       $('html,body').animate({scrollTop: $('.chats')[0].scrollHeight}, 'fast');
       $("form")[0].reset();
     })
