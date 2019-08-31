@@ -9,7 +9,6 @@
 |password|integer|null: false|
 |profile|string|null: false|
 |avatar|string|null: false|
-|entry|integer|
 
 ### Association
 - has_one_attached :avatar
@@ -87,7 +86,7 @@
 |id|integer|null: false|
 |user|references|null: false,foreign_key: true|
 |tweet|references|null: false,foreign_key: true|
-|tweet|comment|
+|text|text|
 
 ### Association
 - belongs_to :user
