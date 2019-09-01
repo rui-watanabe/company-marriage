@@ -17,10 +17,15 @@ a{
   color: lightcoral;
 }
 
+.alert-danger{
+  background-color:rgba(236, 158, 171, 0.815);
+}
+
 .alert-heading{
   text-decoration: none;
   text-align:center;
 }
+
 
 .mb-0{
   text-align:center;
