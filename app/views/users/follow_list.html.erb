@@ -13,9 +13,11 @@
           <p class="card-text">プロフィール：
             <%= user.profile%>
           </p>
-          <div class="button_wrapper"> <button class="btn btn-red100_ftg btn-lg">
-        <%= link_to '詳細', "/users/#{user.id}"%>
-      </button> </div>
+          <div class="button_wrapper" style="margin-top: 153px;"> 
+            <button class="btn btn-red100_rsd btn-block">
+              <%= link_to "#{user.name}さんのページに移動する", "/users/#{user.id}"%>
+            </button> 
+          </div>
         </div>
       </div>
       <% end %>
