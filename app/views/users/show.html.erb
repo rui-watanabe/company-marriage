@@ -21,13 +21,13 @@
             <% else %>
               <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %>
               <% if @isRoom == true %>
-                <p style="text-align:center; margin-top:10px;"><a href="/rooms/<%= @roomId %>" class="btn btn-pink200_rsd">チャットへ</a>
+                <p style="text-align:center; margin-top:50px;"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">チャットへ</a>
               <% else %>
                 <%= form_for @room do |f| %>
                   <%= fields_for @entry do |e| %>
                     <%= e.hidden_field :user_id, value: @user.id %>
                   <% end %>
-                  <%= f.submit "チャットを始める", class:"btn btn-primary",style:"margin-top:30px;"%>
+                  <%= f.submit "チャットを始める", class:"btn btn-primary btn-lg",style:"margin-top:30px;"%>
                 <% end %>
               <% end %>
               <% end %>
@@ -35,14 +35,17 @@
           </div>
           <%if current_user.id==@user.id%> 
             <button style="margin: 0 auto;" class="btn btn-red50_rsd">
-              <%= link_to edit_user_path do%>
-              <span style="color: ">プロフィール編集</span>
+              <%= link_to edit_user_path do%><span>プロフィール編集</span>
               <% end %>
             </button>
+            <% if @user.released? %>
+              <%= link_to '非公開にする',"/users/nonrelease/#{@user.id}", method: :patch ,class:"btn btn-blue100_rsd"%>
+            <% else %>
+              <%= link_to '公開する',"/users/release/#{@user.id}", method: :patch,class:"btn btn-blue100_rsd"%>
+            <% end %>
           <% end %> 
           <button style=" margin: 20px auto 0px;" class="btn btn-red50_rsd">
-          <%= link_to "/users/index" do %>
-          <span>ユーザー一覧に戻る</span>
+            <%= link_to "/users/index" do %><span>ユーザー一覧に戻る</span>
           </button>
           <% end %>
       </div>

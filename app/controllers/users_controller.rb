@@ -64,13 +64,15 @@ class UsersController < ApplicationController
   def release
     @user =  User.find(params[:user_id])
     @user.released! unless @user.released?
-    redirect_to  "/users/#{@user.id}/edit", notice: 'このアカウントを公開しました'
+    flash[:notice]= 'このアカウントを公開しました'
+    redirect_to  "/users/#{@user.id}"
   end
 
   def nonrelease
     @user =  User.find(params[:user_id])
     @user.nonreleased! unless @user.nonreleased?
-    redirect_to "/users/#{@user.id}/edit", notice: 'このアカウントを非公開にしました'
+    flash[:notice]= 'このアカウントを非公開にしました'
+    redirect_to "/users/#{@user.id}"
   end
   
   private

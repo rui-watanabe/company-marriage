@@ -40,11 +40,6 @@
                     </div>
                     <div class="actions" style="padding-top:50px;">
                       <%= f.submit "更新する", class: 'btn btn-pink100_rsd'%>
-                        <% if @user.released? %>
-                          <%= link_to '非公開にする',"/users/nonrelease/#{@user.id}", method: :patch,style:"float:right;" ,class:"btn btn-blue100_rsd"%>
-                        <% else %>
-                          <%= link_to '公開する',"/users/release/#{@user.id}", method: :patch,style:"float:right;",class:"btn btn-blue100_rsd"%>
-                        <% end %>
                     </div>
                   <% end %>
                 </div>
