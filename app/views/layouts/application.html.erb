@@ -37,6 +37,7 @@
               <li class="nav-item"> <a class="nav-link disabled" href="/users/<%= current_user.id %>" style="color:rgba(189, 65, 96, 0.605);">マイページ</a> </li>
               <li class="nav-item"> <a class="nav-link disabled" href="/" style="color:rgba(189, 65, 96, 0.605);">投稿一覧</a> </li>
               <li class="nav-item"> <a class="nav-link disabled" href="/users/index" style="color:rgba(189, 65, 96, 0.605);">ユーザー一覧</a> </li>
+              <li class="nav-item"> <a class="nav-link disabled" href="/users/matching_list/<%= current_user.id %>" style="color:rgba(189, 65, 96, 0.605);">マッチング一覧</a> </li>
               <% else %>
                 <li class="nav-item">
                   <%= link_to("about", "/about" ,{class: "nav-link",style:"color:rgba(189, 65, 96, 0.605);"}) %>

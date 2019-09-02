@@ -61,6 +61,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
+  def matching_list
+    @user = User.find(params[:user_id])
+    (current_user.followed_by? @user) && (@user.followed_by? current_user)
+  end
+
   def release
     @user =  User.find(params[:user_id])
     @user.released! unless @user.released?
