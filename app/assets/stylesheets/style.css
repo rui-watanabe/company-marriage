@@ -17,6 +17,11 @@ a{
   color: lightcoral;
 }
 
+.button-a {
+  display: block;
+  text-align: center;
+}
+
 .alert-danger{
   background-color:rgba(236, 158, 171, 0.815);
 }

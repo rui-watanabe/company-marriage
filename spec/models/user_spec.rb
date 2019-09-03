@@ -29,7 +29,7 @@ describe User do
       end
 
       it 'is invalid without profile' do
-        user = build(:user, profile "")
+        user = build(:user, profile: "")
         user.valid?
         expect(user.errors[:profile]).to include('を入力してください。')
       end
@@ -62,4 +62,23 @@ describe User do
   end
 
 
+end
+
+module RemoveUploadedFiles
+  def after_teardown
+    super
+    remove_uploaded_files
+  end
+ 
+  private
+ 
+  def remove_uploaded_files
+    FileUtils.rm_rf(Rails.root.join('tmp', 'storage'))
+  end
+end
+ 
+module ActionDispatch
+  class IntegrationTest
+    prepend RemoveUploadedFiles
+  end
 end
