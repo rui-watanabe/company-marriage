@@ -1,0 +1,18 @@
+<div class="card-group" style="margin:30px;">
+        <div class="border">
+          <%= image_tag user.avatar,style:"width:360px; height:360px;"%>
+        </div>
+        <div class="card-body" style="margin:30px;" %>
+          <h4 class="card-title">
+            <%= user.name %>
+          </h4>
+          <p class="card-text">プロフィール：
+            <%= user.profile%>
+          </p>
+          <div class="button_wrapper" style="margin-top: 153px;"> 
+            <button class="btn btn-red100_rsd btn-block">
+              <%= link_to "#{user.name}さんのページに移動する", "/users/#{user.id}",class:"button-a"%>
+            </button> 
+          </div>
+        </div>
+      </div>

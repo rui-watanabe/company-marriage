@@ -3,24 +3,7 @@
     <h1 class="users-heading" style="text-align:center; padding:40px;">マッチングリスト</h1>
     <% @user.followers.each do |user| %>
       <% if (current_user.followed_by? user) && (user.followed_by? current_user)  %>
-        <div class="card-group" style="margin:30px;">
-          <div class="border">
-            <%= image_tag user.avatar,style:"width:360px; height:360px;"%>
-          </div>
-          <div class="card-body" style="margin:30px;" %>
-            <h4 class="card-title">
-              <%= user.name %>
-            </h4>
-            <p class="card-text">プロフィール：
-              <%= user.profile%>
-            </p>
-            <div class="button_wrapper" style="margin-top: 153px;"> 
-              <button class="btn btn-red100_rsd btn-block">
-                <%= link_to "#{user.name}さんのページに移動する", "/users/#{user.id}",class:"button-a"%>
-              </button> 
-            </div>
-          </div>
-        </div>
+        <%= render "matching_list", user: user%>
       <% end %>
      <% end %>
   </div>
