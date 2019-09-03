@@ -52,3 +52,9 @@ a{
   display: block;
   clear: both;
 }
+
+.pagination{
+  font-size: 40px;
+  letter-spacing: 20px;
+  margin-left: 250px
+}
