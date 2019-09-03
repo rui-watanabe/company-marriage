@@ -2,26 +2,8 @@
   <div class="container">
     <h1 class="users-heading" style="text-align:center; padding:40px;">あなたが気になるリスト</h1>
     <% @user.followers.each do |user| %>
-      <div class="card-group" style="margin:30px;">
-        <div class="border">
-          <%= image_tag user.avatar,style:"width:360px; height:360px;"%>
-        </div>
-        <div class="card-body" style="margin:30px;" %>
-          <h4 class="card-title">
-            <%= user.name %>
-          </h4>
-          <p class="card-text">プロフィール：
-            <%= user.profile%>
-          </p>
-          <div class="button_wrapper" style="margin-top: 153px;"> 
-            <button class="btn btn-red100_rsd btn-block">
-              <%= link_to "#{user.name}さんのページに移動する", "/users/#{user.id}",class:"button-a"%>
-            </button> 
-          </div>
-        </div>
-      </div>
-      <% end %>
-    </div>
+      <%= render "follower_list", user: user %>   
+    <% end %>
   </div>
 </div>
 <div class="mypage-button">
