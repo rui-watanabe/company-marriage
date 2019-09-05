@@ -30,6 +30,7 @@
 
   <div class="form-group">
     <%= f.label :password %>
+    <i>(英数字6文字以上)</i>
     <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control',placeholder:"6文字以上のパスワードを入力してください"%>
 
     <% if @minimum_password_length %>

@@ -5,10 +5,10 @@
         <%= image_tag tweet.user.avatar,style:"width:200px; height:200px; " %>
       </div>
       <div class="card-body">
-        <h4 class="card-title">
+        <h4 class="card-title" style="width:235px; word-wrap:break-word;">
           <%= tweet.user.name %>
         </h4>
-        <p class="card-text" style="word-wrap:break-word;">
+        <p class="card-text" style="width:235px; word-wrap:break-word;">
           <%= tweet.text%>
         </p>
         <p class="card-text"><small class="text-muted"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></small></p>
