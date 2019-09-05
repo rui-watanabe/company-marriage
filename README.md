@@ -3,6 +3,8 @@ http://3.114.152.122/
 
 <img width="927" alt="aaa26a93bef133bed8bbddcd7ea6c8dc" src="https://user-images.githubusercontent.com/52365507/64315010-cb80f080-cfeb-11e9-98dc-7eec98c68946.jpg">
 
+使い方：http://3.114.152.122/about
+
 # Company-Marriageの制作理由
 ・収益性がある
 ・カリキュラムの復習
