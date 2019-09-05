@@ -22,6 +22,11 @@ a{
   text-align: center;
 }
 
+.alert{
+  background-color:rgba(236, 158, 171, 0.815);
+  text-align:center;
+}
+
 .alert-danger{
   background-color:rgba(236, 158, 171, 0.815);
 }
@@ -57,4 +62,12 @@ a{
   font-size: 40px;
   letter-spacing: 20px;
   margin-left: 250px
+}
+
+.nav-item{
+  font-weight:bold;
+}
+
+.top-button{
+  margin-top:50px;
 }
