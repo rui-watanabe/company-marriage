@@ -1,7 +1,7 @@
 # Company-Marriageについて
 http://3.114.152.122/
 
-<img width="927" alt="3cd001ad98864d005fda5e9e66aeff36" src="https://user-images.githubusercontent.com/52365507/64236189-d9276f00-cf34-11e9-9707-56950897e8bf.jpg">
+<img width="927" alt="aaa26a93bef133bed8bbddcd7ea6c8dc" src="https://user-images.githubusercontent.com/52365507/64315010-cb80f080-cfeb-11e9-98dc-7eec98c68946.jpg">
 
 # Company-Marriageの制作理由
 ・収益性がある
