@@ -7,6 +7,11 @@ http://3.114.152.122/
   
 username:admin  
 password:2222  
+
+テストアカウント  
+Email:test2@gmail.com
+Password:11111111
+
   
 # Company-Marriageの制作理由
 ・_収益性がある_  
