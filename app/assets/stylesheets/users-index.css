@@ -1,0 +1,22 @@
+.user-card-group{
+  margin:30px;
+}
+
+.user-avatar{
+  width:360px; 
+  height:360px;
+}
+
+.user-card-body{
+  margin:30px;
+}
+
+.user-card-title{
+  font-weight:bold;
+  font-size:30px;
+  padding-bottom:30px;
+}
+
+.button_wrapper{
+  margin-top: 153px;
+}

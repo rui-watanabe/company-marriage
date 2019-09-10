@@ -1,11 +1,11 @@
 <div class="main users-index">
   <div class="container">
-    <h1 class="users-heading" style="text-align:center; padding:40px;">気になるリスト</h1>
+    <h1 class="users-heading">気になるリスト</h1>
     <% @user.all_following.each do |user| %>
       <%= render "follow_list", user: user %>   
     <% end %>
   </div>
 </div>
 <div class="mypage-button">
-  <%= link_to "マイページに戻る", user_path(current_user.id),class:"edit-link",style:"margin-left:195px;" %>
+  <%= link_to "マイページに戻る", user_path(current_user.id),class:"edit-link"%>
 </div>

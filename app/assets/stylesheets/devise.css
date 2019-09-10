@@ -1,0 +1,14 @@
+.devise-contents{
+  width: 50%;
+  margin:0 auto;
+}
+
+.devise-new-button{
+  float:right;
+  font-weight: bold;
+}
+
+.devise-login-buttuon{
+  float: right;
+  font-weight: bold;
+}

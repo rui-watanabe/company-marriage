@@ -23,39 +23,39 @@
     <script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script crossorigin="anonymous" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: pink;">
-      <%= link_to("Company-Marriage", "/home" ,{class: "navbar-brand",style:"color:white;"})%> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" ></span>
+    <nav class="navbar navbar-expand-lg navbar-light nav-background">
+      <%= link_to("Company-Marriage", "/home" ,{class: "navbar-brand"})%> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <% if user_signed_in? %>
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                  <%= link_to("このアプリについて", "/about" ,{class: "nav-link",style:"color:rgba(189, 65, 96, 0.605);"}) %>
+                  <%= link_to("このアプリについて", "/about" ,{class: "nav-link"}) %>
               </li>
             </ul>
             <ul class="navbar-nav">                      
-              <li class="nav-item"> <a class="nav-link" href="/tweets/new" style="color:rgba(189, 65, 96, 0.605);">投稿する</a> </li>
-              <li class="nav-item"> <a class="nav-link disabled" href="/users/<%= current_user.id %>" style="color:rgba(189, 65, 96, 0.605);">マイページ</a> </li>
-              <li class="nav-item"> <a class="nav-link disabled" href="/" style="color:rgba(189, 65, 96, 0.605);">投稿一覧</a> </li>
-              <li class="nav-item"> <a class="nav-link disabled" href="/users/index" style="color:rgba(189, 65, 96, 0.605);">ユーザー一覧</a> </li>
-              <li class="nav-item"> <a class="nav-link disabled" href="/users/matching_list/<%= current_user.id %>" style="color:rgba(189, 65, 96, 0.605);">マッチング一覧</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="/tweets/new">投稿する</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="/users/<%= current_user.id %>">マイページ</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="/">投稿一覧</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="/users/index">ユーザー一覧</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="/users/matching_list/<%= current_user.id %>">マッチング一覧</a> </li>
               <li class="nav-item">
-                <%= link_to 'ログアウト', destroy_user_session_path, class: "nav-link", method: :delete, style:"color:rgba(189, 65, 96, 0.605);"%>
+                <%= link_to 'ログアウト', destroy_user_session_path, class: "nav-link", method: :delete%>
               </li>
             </ul>
           <% else %>
             <ul class="navbar-nav mr-auto">                      
               <li class="nav-item">
-                <%= link_to("このアプリについて", "/about" ,{class: "nav-link",style:"color:rgba(189, 65, 96, 0.605);"}) %>
+                <%= link_to("このアプリについて", "/about" ,{class: "nav-link"}) %>
               </li>
             </ul>
             <ul class="navbar-nav">                        
               <li class="nav-item">
-                <%= link_to "ログイン", new_user_session_path, class: 'nav-link',style:"color:rgba(189, 65, 96, 0.605);"%>
+                <%= link_to "ログイン", new_user_session_path, class: 'nav-link'%>
               </li>
               <li class="nav-item">
-                <%= link_to "新規登録", new_user_registration_path, class: 'nav-link',style:"color:rgba(189, 65, 96, 0.605);" %>
+                <%= link_to "新規登録", new_user_registration_path, class: 'nav-link'%>
               </li>
             </ul>
           <% end %>

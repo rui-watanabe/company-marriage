@@ -1,10 +1,10 @@
 <div class="container">
-  <%= form_tag("/tweets/#{@tweet.id}", method: :patch, style:"margin:0 auto ;padding:60px;") do %>
+  <%= form_tag("/tweets/#{@tweet.id}", method: :patch, class:"tweet-form") do %>
     <h3 class="text-center">編集する </h3>
     <div class="form-group">
-      <div class="row" style="padding-top: 30px;">
-        <div class="col-sm-10" style="margin-left: 100px;"> <textarea class="form-control  input-sm" rows="5" name="text" placeholder=""><%= @tweet.text %></textarea> </div>
+      <div class="tweet-row">
+        <div class="col-sm-10 tweet-content"> <textarea class="form-control  input-sm" rows="5" name="text" placeholder=""><%= @tweet.text %></textarea> </div>
       </div>
-    <div class="text-center" style="padding: 30px;"> <input class="btn btn-red50_rsd" type="submit" value="SENT"> </div>
+    <div class="text-center tweet-edit-text"> <input class="btn btn-red50_rsd" type="submit" value="投稿を更新する"> </div>
   <% end %>
 </div>

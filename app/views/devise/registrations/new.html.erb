@@ -1,5 +1,5 @@
-<div class="contentns" style="width:50%; margin:0 auto;">
-<h1 style="padding-top:30px;"><%= t('新規登録') %></h1>
+<div class="devise-contents">
+<h1><%= t('新規登録') %></h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= bootstrap_devise_error_messages! %>
@@ -44,7 +44,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit ('新規登録'), class: 'btn btn-red50_rsd',style:"float:right;"%>
+    <%= f.submit ('新規登録'), class: 'btn btn-red50_rsd devise-new-button'%>
   </div>
 <% end %>
 

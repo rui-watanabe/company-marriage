@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-4" style="margin:0 auto;">
-      <h3 style="text-align:center; margin:10px;">
+    <div class="col-lg-4">
+      <h3 class="user-show-title">
         <%= @user.name %> <span>さんのページ</span></h3>
-      <div class="card" style="color:black;">
+      <div class="card user-show-card">
         <%= image_tag @user.avatar.variant(resize:'400x600').processed %>
-          <div class="card-body" style="margin:0 auto;">
-            <p class="card-text" style="text-align:center; font-size: 30px;"><strong><%= @user.name %></strong></p>
-            <p class="card-text" style="text-align:center;"><%= @user.profile %></p>
+          <div class="card-body user-show-card-body">
+            <p class="card-text user-show-card-text"><strong><%= @user.name %></strong></p>
+            <p class="card-text user-show-card-text-profile"><%= @user.profile %></p>
             <%if current_user.id==@user.id%>
               <%= @user.follow_count %>
                 <%= link_to "人気になる", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get %>
@@ -21,20 +21,20 @@
             <% else %>
               <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %>
               <% if @isRoom == true %>
-                <p style="text-align:center; margin-top:50px;"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">チャットへ</a>
+                <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">チャットへ</a>
               <% else %>
                 <%= form_for @room do |f| %>
                   <%= fields_for @entry do |e| %>
                     <%= e.hidden_field :user_id, value: @user.id %>
                   <% end %>
-                  <%= f.submit "チャットを始める", class:"btn btn-primary btn-lg",style:"margin-top:30px;"%>
+                  <%= f.submit "チャットを始める", class:"btn btn-primary btn-lg user-show-chat"%>
                 <% end %>
               <% end %>
               <% end %>
             <% end %>
           </div>
           <%if current_user.id==@user.id%> 
-            <button style="margin: 0 auto;" class="btn btn-red50_rsd">
+            <button class="btn btn-red50_rsd user-edit-button">
               <%= link_to edit_user_path,class:"button-a" do%><span>プロフィール編集</span>
               <% end %>
             </button>
@@ -44,7 +44,7 @@
               <%= link_to '公開する',"/users/release/#{@user.id}", method: :patch,class:"btn btn-blue100_rsd"%>
             <% end %>
           <% end %> 
-          <button style=" margin: 20px auto 0px;" class="btn btn-red50_rsd">
+          <button class="btn btn-red50_rsd user-index-button">
             <%= link_to "/users/index",class:"button-a" do %><span>ユーザー一覧に戻る</span>
           </button>
           <% end %>
