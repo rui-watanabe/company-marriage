@@ -1,5 +1,5 @@
-<div class="contentns" style="width:50%; margin:0 auto;">
-<h1 style="padding-top:30px;"><%= t('ログイン') %></h1>
+<div class="devise-contents">
+<h1><%= t('ログイン') %></h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <%= bootstrap_devise_error_messages! %>
@@ -24,7 +24,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.submit  ('ログイン'), class: 'btn btn-red50_rsd' ,style:"float:right"%>
+    <%= f.submit  ('ログイン'), class: 'btn btn-red50_rsd devise-login-buttuon'%>
   </div>
 <% end %>
 

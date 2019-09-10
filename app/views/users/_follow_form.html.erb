@@ -1,5 +1,5 @@
 <%unless current_user.id==@user.id%>
-<div id="follow_form" style="text-align:center; margin-top:10px;" >
+<div id="follow_form">
   <% if current_user.following? @user %>
     <%= link_to "気になる削除", {controller: :users,action: :unfollow,user_id: @user.id}, method: :put, class:"btn btn-red50_rsd"%>
   <% else %>

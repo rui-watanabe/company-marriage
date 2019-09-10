@@ -1,0 +1,49 @@
+.btn-blue100_rsd{
+  display: inline-block;
+  width: 150px;
+  margin: 30px auto 0;
+}
+
+.follow_form{
+  text-align:center; 
+  margin-top:10px;
+}
+
+.col-lg-4{
+  margin:0 auto;
+}
+
+.user-show-title{
+  text-align:center; 
+  margin:10px;
+}
+
+.user-show-card{
+  color:black;
+}
+
+.user-show-card-body{
+  margin:0 auto;
+}
+
+.user-show-card-text{
+  text-align:center; 
+  font-size: 30px;
+}
+
+.user-show-card-text-profile{
+  text-align:center;
+}
+
+.user-show-room{
+  text-align:center;
+  margin-top:50px;
+}
+
+.user-show-chat{
+  margin-top:30px;
+}
+
+.user-index-button{
+  margin: 25px auto 20px;
+}

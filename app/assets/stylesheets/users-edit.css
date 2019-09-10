@@ -1,0 +1,19 @@
+.user-edit-label{
+  color:black;
+  font-weight: bold;
+}
+
+.users-edit-profile-field{
+  margin-top:30px;
+  color:black;
+}
+
+.users-edit-avatar-field{
+  padding-top:20px;
+  color:black;
+}
+
+.actions{
+  padding-top:50px;
+  float:right;
+}

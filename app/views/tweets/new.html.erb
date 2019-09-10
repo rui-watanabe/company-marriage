@@ -1,10 +1,10 @@
 <div class="container">
-  <%= form_tag('/tweets', method: :post) do %>
-    <h3 class="text-center" style="padding: 30px;">投稿する </h3>
+  <%= form_tag('/tweets', method: :post,class: "tweet-form") do %>
+    <h3 class="text-center">投稿する </h3>
     <div class="form-group">
-      <div class="row" style="padding-top: 30px;">
-        <div class="col-sm-10" style="margin-left: 100px;"> <textarea class="form-control  input-sm" rows="5" name="text" id="comment" placeholder="テキストを入力"></textarea> </div>
+      <div class="tweet-row">
+        <div class="col-sm-10 tweet-content"> <textarea class="form-control  input-sm" rows="5" name="text" id="comment" placeholder="テキストを入力"></textarea> </div>
       </div>
-    <div class="text-center" style="padding: 30px;"> <input class="btn btn-red50_rsd" type="submit" value="SENT"> </div>
+    <div class="text-center tweet-new-text"> <input class="btn btn-red50_rsd" type="submit" value="投稿する"> </div>
   <% end %>
 </div>

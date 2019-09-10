@@ -13,6 +13,11 @@ body {
   color:white;
 }
 
+h1{
+  text-align:center; 
+  padding:40px;
+}
+
 a{
   color: lightcoral;
 }
@@ -70,4 +75,12 @@ a{
 
 .top-button{
   margin-top:50px;
+}
+
+.edit-link{
+  margin:30px 30px 30px 1030px;
+}
+
+.user-edit-button{
+  margin:0 auto;
 }

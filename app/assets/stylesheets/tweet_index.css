@@ -1,0 +1,32 @@
+.tweets-index-row{
+  width:60%; 
+  margin: 0 auto;
+  background-color:rgba(255, 192, 203, 0.388);
+}
+
+.tweets-index-card-group{
+  width:60%; 
+  margin: 0 auto; 
+  padding:20px;
+}
+
+.tweets-index-border{
+  width:200px; 
+  height:200px;
+  margin:0 auto;
+}
+
+.tweets-index-avatar{
+  width:200px; 
+  height:200px;
+}
+
+.tweets-inde-card-title{
+  width:235px; 
+  word-wrap:break-word;
+}
+
+.tweets-index-card-text{
+  width:235px; 
+  word-wrap:break-word;
+}

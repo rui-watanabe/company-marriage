@@ -1,0 +1,22 @@
+.tweet-row{
+  padding-top: 30px;
+}
+
+.tweet-content{
+  margin-left: 100px;
+}
+
+.tweet-edit-text{
+  padding: 30px;
+}
+
+.tweet-new-text{
+  padding: 30px;
+}
+
+.tweet-form{
+  margin:0 auto;
+  padding:60px;
+}
+
+

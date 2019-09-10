@@ -1,6 +1,6 @@
 <div class="main users-index">
   <div class="container">
-    <h1 class="users-heading" style="text-align:center; padding:40px;">マッチングリスト</h1>
+    <h1 class="users-heading">マッチングリスト</h1>
     <% @user.followers.each do |user| %>
       <% if (current_user.followed_by? user) && (user.followed_by? current_user)  %>
         <%= render "matching_list", user: user%>
@@ -9,5 +9,5 @@
   </div>
 </div>
 <div class="mypage-button">
-  <%= link_to "マイページに戻る", user_path(current_user.id),class:"edit-link",style:"margin-left:195px;" %>
+  <%= link_to "マイページに戻る", user_path(current_user.id),class:"edit-link" %>
 </div>

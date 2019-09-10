@@ -1,0 +1,15 @@
+.nav-background{
+  background-color:pink;
+}
+
+.navbar-light .navbar-brand {
+  color:white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color:rgba(189, 65, 96, 0.605);
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color:rgba(189, 65, 96, 0.605);
+}

@@ -1,17 +1,17 @@
 <% @tweets.each do |tweet| %>
-  <div class="contents row" style="width:60%; margin: 0 auto;background-color:rgba(255, 192, 203, 0.388)">
-    <div class="card-group" style="width:60%; margin: 0 auto; padding:20px;">
-      <div class="border" style="width:200px; height:200px;margin:0 auto; ">
-        <%= image_tag tweet.user.avatar,style:"width:200px; height:200px; " %>
+  <div class="tweets-index-row">
+    <div class="card-group tweets-index-card-group">
+      <div class="tweets-index-border">
+        <%= image_tag tweet.user.avatar, class:"tweets-index-avatar"%>
       </div>
       <div class="card-body">
-        <h4 class="card-title" style="width:235px; word-wrap:break-word;">
+        <h4 class="card-title tweets-index-card-title">
           <%= tweet.user.name %>
         </h4>
-        <p class="card-text" style="width:235px; word-wrap:break-word;">
+        <p class="card-text tweets-index-card-text">
           <%= tweet.text%>
         </p>
-        <p class="card-text"><small class="text-muted"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></small></p>
+        <p class="card-text tweets-index-card-text"><small class="text-muted"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></small></p>
         <div class="button-wrapper">
           <button class="btn btn-red100_ftg btn-lg" value="詳細">
             <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get, class:"button-a"%>
@@ -21,11 +21,9 @@
                 </button> <button class="btn btn-red100_ftg btn-lg">
                   <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete,class:"button-a"%>
                 </button>
-            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
-  </div>
-  </div>
   </div>
 <% end %>
