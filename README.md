@@ -9,7 +9,7 @@ username:admin
 password:2222  
 
 テストアカウント  
-Email:test2@gmail.com
+Email:test2@gmail.com  
 Password:11111111
 
   
