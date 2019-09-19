@@ -9,7 +9,7 @@ username:admin
 password:2222  
 
 テストアカウント  
-Email:test2@gmail.com
+Email:test2@gmail.com  
 Password:11111111
 
   
@@ -188,5 +188,5 @@ Password:11111111
   
 ## ER図
   
-<img width="871" alt="5d88eb5b0e23debe310f9fe1876ebbae" src="https://user-images.githubusercontent.com/52365507/64919099-f0424880-d7e1-11e9-8a43-6f2d6ebb79df.png">
+<img width="963" alt="effd705e0af165943b600ea7aecb729e" src="https://user-images.githubusercontent.com/52365507/65006806-2517e200-d93f-11e9-97de-2a605fa51cc2.png">
 
