@@ -67,7 +67,7 @@ Password:11111111
 ・投稿に対して、非同期通信でコメントができます。  
   
 ## フォロー（マッチング）機能
-・ユーザー一覧ページから気になった人に対して、気になるボタンを押せます。  
+・異性のユーザー一覧ページから気になった人に対して、気になるボタンを押せます。  
 ・ユーザーマイページから、気なるボタンを押した人  ・押された人の一覧を確認することができます。  
   
 ## ダイレクトメール機能
@@ -82,7 +82,6 @@ Password:11111111
   
 # 今後実装したいこと
 ・動的なwebサービスするため、JavaScript（jQuery）を多用する。  
-・ユーザー一覧に異性だけを表示させる。  
 ・レスポンシブルデザインへの対応。  
 ・マッチングが成立した時、コメントされた時、メッセージが来た時の通知機能。  
 ・Active Storageで複数画像選択をできるようにする。  
@@ -97,7 +96,9 @@ Password:11111111
 |email|string|null: false, unique: true|
 |password|integer|null: false|
 |profile|string|null: false|
-|avatar|string|null: false|  
+|avatar|string|null: false|
+|sex|integer|null: false|  
+|avatar|integer|
   
 ### Association
 - has_one_attached :avatar
@@ -184,9 +185,9 @@ Password:11111111
   
 ## enum
 - enum users, :status  
-  
+- enum users, :sex
   
 ## ER図
-  
-<img width="963" alt="effd705e0af165943b600ea7aecb729e" src="https://user-images.githubusercontent.com/52365507/65006806-2517e200-d93f-11e9-97de-2a605fa51cc2.png">
+
+ <img width="1005" alt="82563bcb81e015c58ee7ce3963792137" src="https://user-images.githubusercontent.com/52365507/65244050-a41a3f80-db24-11e9-9933-34b2ab00adcf.png">
 
