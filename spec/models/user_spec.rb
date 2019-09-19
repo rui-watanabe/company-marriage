@@ -5,7 +5,7 @@ describe User do
   describe '#create' do
 
     context 'can save' do
-      it 'is valid with a name, avatar, profile, email, password, password_confirmation' do
+      it 'is valid with a name, avatar, profile, sex, email, password, password_confirmation' do
         expect(build(:user)).to be_valid
       end
 
@@ -26,6 +26,12 @@ describe User do
         user = build(:user, email: "")
         user.valid?
         expect(user.errors[:email]).to include('を入力してください。')
+      end
+
+      it 'is invalid without sex' do
+        user = build(:user, sex: "")
+        user.valid?
+        expect(user.errors[:sex]).to include('を入力してください。')
       end
 
       it 'is invalid without profile' do
