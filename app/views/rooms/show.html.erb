@@ -1,5 +1,5 @@
 <div class="left-button">
-  <%= link_to "ユーザー一覧に戻る", "/users/index",class:"edit-link" %>
+  <%= link_to "マッチングリストに戻る", "/users/matching_list/#{current_user.id }",class:"edit-link" %>
 </div>
 <h4 class="rooms-title">気になる同士</h4>
 <% @entries.each do |e| %>
@@ -7,7 +7,8 @@
   <strong>
     <%= image_tag e.user.avatar, class:"user-image" %>
       <a class="rooms-user-link" href="/users/<%= e.user.id %>">
-        <%= e.user.name %>さん</a>
+        <%= e.user.name %>さん
+      </a>
   </strong>
   </div>
 <% end %>
@@ -30,8 +31,8 @@
   <div class="posts">
     <%= form_for @message do |f| %>
       <%= f.text_field :content, placeholder: "メッセージを入力して下さい" , size: 70, class:"form-text-field" %>
-        <%= f.hidden_field :room_id, value: @room.id %>
-          <%= f.submit "投稿",class: 'form-submit'%>
+      <%= f.hidden_field :room_id, value: @room.id %>
+      <%= f.submit "投稿",class: 'form-submit'%>
     <% end %>
   </div>
 </div>
