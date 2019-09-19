@@ -1,18 +1,20 @@
 <% @users.each do |user| %>
-  <div class="card-group user-card-group">
-    <%= image_tag user.avatar,class:"user-avatar"%>
-    <div class="card-body user-card-body" %>
-      <h4 class="card-title user-card-title">
-        <%= user.name %>
-      </h4>
-      <p class="card-text">プロフィール：
-        <%= user.profile%>
-      </p>
-      <div class="button_wrapper"> 
-        <button class="btn btn-red100_rsd btn-block">
-          <%= link_to "#{user.name}さんのページに移動する", "/users/#{user.id}",class:"button-a"%>
-        </button> 
+  <% if current_user.sex != user.sex %>
+    <div class="card-group user-card-group">
+      <%= image_tag user.avatar,class:"user-avatar"%>
+      <div class="card-body user-card-body" %>
+        <h4 class="card-title user-card-title">
+          <%= user.name %>
+        </h4>
+        <p class="card-text">プロフィール：
+          <%= user.profile%>
+        </p>
+        <div class="button_wrapper"> 
+          <button class="btn btn-red100_rsd btn-block">
+            <%= link_to "#{user.name}さんのページに移動する", "/users/#{user.id}",class:"button-a"%>
+          </button> 
+        </div>
       </div>
     </div>
-  </div>
- <% end %>
+  <% end %>
+<% end %>
