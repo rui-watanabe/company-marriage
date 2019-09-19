@@ -15,11 +15,15 @@ body {
 
 h1{
   text-align:center; 
-  padding:40px;
+  padding:25px;
 }
 
 a{
   color: lightcoral;
+}
+
+label{
+  font-size:25px;
 }
 
 .button-a {
@@ -83,4 +87,15 @@ a{
 
 .user-edit-button{
   margin:0 auto;
+}
+
+.sex-man{
+  font-size:20px;
+  color: blue;
+}
+
+.sex-lady{
+  font-size:20px;
+  color: rgb(243, 117, 138);
+  font-weight: bold;
 }
